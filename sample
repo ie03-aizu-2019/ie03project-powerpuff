@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int N, M, P, Q;
+int x[1000], y[1000];
+
+cin >> N, M, P, Q;
+
+for(int i=0; i<N; i++){
+cin >> x[i] >> y[i];
+}
+for(int i=0; i<M; i++){
+}
+for(int i=0; i<P; i++){
+}
+for(int i=0; i<Q; i++){
+}
+
+}
+
+return 0;

@@ -21,7 +21,6 @@ struct Store{
     double define[SIZE];
 };
 
-
 struct Point{
   double x;
   double y;
@@ -404,10 +403,15 @@ int main(){
   
   cin >> N >> M >> P >> Q;                   //N,M,P,Qデータ入力
   
-  /*-----------------------------制約---------------------------------*/
-  if(N<2 && 200<N) cout << "You should input 2 or more, 200 or less number." << endl;
-  if(M<1 && N<=M) cout << "You should input 1 or more,"<< N <<" or less number." << endl;
-  if(Q<0 && 100<Q) cout << "You should input 0 or more, 100 or less number." << endl;
+   /*-----------------------------制約---------------------------------*/
+  if(N<2 || 200<N)
+    cout << "You should input 2 or more, 200 or less number of N."<< endl;
+  if(M<1 || N<=M)
+    cout << "You should input 1 or more,"<< N <<" or less number of M."<< endl;
+  if(P!=0)
+    cout << "You should input 0 number of P."<< endl;
+  if(Q<0 || 100<Q)
+    cout << "You should input 0 or more, 100 or less number of Q."<< endl;
   /*------------------------------------------------------------------*/
 
     for(int i=1; i<=N; i++){

@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <cmath>
 #include <string>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -401,8 +403,14 @@ void Judgement(){
 int main(){
   
   cin >> N >> M >> P >> Q;                   //N,M,P,Qデータ入力
+  
+  /*-----------------------------制約---------------------------------*/
+  if(N<2 && 200<N) cout << "You should input 2 or more, 200 or less number." << endl;
+  if(M<1 && N<=M) cout << "You should input 1 or more,"<< N <<" or less number." << endl;
+  if(Q<0 && 100<Q) cout << "You should input 0 or more, 100 or less number." << endl;
+  /*------------------------------------------------------------------*/
 
-  for(int i=1; i<=N; i++){
+    for(int i=1; i<=N; i++){
     cin >> points[i].x >> points[i].y;     //座標データ入力
   }
     
